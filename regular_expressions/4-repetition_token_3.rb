@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 # 4-repetition_token_3.rb
-# Match a string that starts with 'h', then exactly one character, then 'n' (whole-string match)
+# Matches: hbn, hbon, hbtn, hbttn, hbtttn, hbttttn
 text = ARGV[0] || ""
-puts text.scan(/^h.n$/).join
+puts text.scan(/^hb(?:o|t+)?n$/).join
